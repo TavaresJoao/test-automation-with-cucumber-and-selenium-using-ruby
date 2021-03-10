@@ -14,6 +14,6 @@ end
 
 Capybara.configure do |config|
     config.run_server = false
-    config.default_driver = :remote_driver
+    config.default_driver = :remote_chrome
     config.app_host = 'http://www.google.com'
 end
