@@ -1,6 +1,6 @@
 require 'capybara'
-require 'capybara/cucumber'
-require 'capybara/rspec'
+# require 'capybara/cucumber'
+# require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'pry'
 
@@ -13,8 +13,13 @@ Capybara.register_driver :remote_chrome do |app|
     :url => "http://#{docker_ip}:4444/wd/hub")
 end
 
-Capybara.configure do |config|
-    config.run_server = false
-    config.default_driver = :remote_chrome
-    config.app_host = 'http://www.google.com'
-end
+# Capybara.configure do |config|
+#     config.run_server = false
+#     config.default_driver = :remote_chrome
+#     config.app_host = 'http://www.google.com'
+# end
+
+Capybara.default_driver = :remote_chrome
+
+@browser = Capybara.current_session
+binding.pry
