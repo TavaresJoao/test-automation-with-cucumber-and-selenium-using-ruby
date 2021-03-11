@@ -1,5 +1,6 @@
-require 'rspec'
+require 'capybara'
 require 'capybara/cucumber'
+require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'pry'
 

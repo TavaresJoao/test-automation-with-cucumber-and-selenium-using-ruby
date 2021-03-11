@@ -1,9 +1,7 @@
-Quando("procurar por {string}") do |string|
-    visit "/"
-    fill_in "q", with: string
-    click_on "Pesquisa Google", match: :first
+Quando('procurar por cão') do
+    pending
 end
-  
-Então("eu devo ver {string}") do |string|
-    page.should have_content(string)
+
+Então('eu devo ver cachorro') do
+   pending # Write code here that turns the phrase above into concrete actions
 end
